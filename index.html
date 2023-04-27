@@ -5,11 +5,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon/favicon-32x32.png" />
-		<link rel="manifest" href="/site.webmanifest" />
+			rel="shortcut icon"
+			href="./images/favicon/favicon.ico"
+			type="image/x-icon" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,163 +16,168 @@
 			referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="./script.js" defer></script>
-
 		<title>Portfolio R.BRUNO</title>
 	</head>
 	<body>
-		<!-- ? header -->
+		<!-- * header -->
+
 		<header class="header">
 			<div class="logo">
 				<img src="./images/logo.png" alt="Logo" class="img" />
 			</div>
-			<div class="music">
-				<audio
-					id="song"
-					controls
-					volume="0.1"
-					src="./song/Jaunter-Reset.mp3"
-					loop>
-					Auteur: Jaunter
+			<figure class="music">
+				<figcaption>Auteur: Jaunter</figcaption>
+				<audio id="song" controls loop>
+					<source src="./song/Jaunter-Reset.mp3" type="audio/mp3" />
+					<!-- message affiché si le navigateur ne supporte pas l'élément audio -->
+					Votre navigateur ne supporte pas l'élément audio.
 				</audio>
-			</div>
-			<!-- ? Navbar -->
-			<!-- ! burger -->
+			</figure>
+
+			<!-- * Navbar -->
+
+			<!--  burger -->
 			<button type="button" class="nav-toggle">
 				<i class="fa-solid fa-bars"></i>
 			</button>
 
 			<nav class="navbar">
-				<ul class="nav-links">
-					<li>
-						<a href="#presentation" class="nav-link">Presentation</a>
-					</li>
-					<li><a href="#skills" class="nav-link">Skills</a></li>
-					<li><a href="#projets" class="nav-link">Projets</a></li>
-					<li><a href="#contact" class="nav-link">Contact</a></li>
-				</ul>
+				<div class="nav-center">
+					<ul class="nav-links">
+						<li>
+							<a href="#presentation" class="nav-link">Présentation</a>
+						</li>
+						<li>
+							<a href="#skills" class="nav-link">Skills</a>
+						</li>
+						<li>
+							<a href="#projets" class="nav-link">Projets</a>
+						</li>
+						<li>
+							<a href="#contact" class="nav-link">Contact</a>
+						</li>
+					</ul>
+				</div>
 			</nav>
-			<!-- ! fin burger -->
+			<!--  fin burger -->
 		</header>
 
-		<!-- ? Main Page -->
-		<!-- ! video background -->
+		<!-- * Main Page -->
+
+		<!--  video background -->
 		<video autoplay muted loop play-inline id="video-bg">
 			<source src="./images/background/Matrice-video.mp4" type="video/mp4" />
 		</video>
 
 		<main class="main">
 			<!-- ? Moi -->
-			<div class="auteur">
+
+			<div class="author">
 				<h1 class="name">Rémy BRUNO</h1>
 				<h2 class="subtitle">Développeur web et web mobile</h2>
 			</div>
-			<div class="avatar">
-				<img
-					src="./images/8bitpix.png"
-					alt="Avatar 8bit barbu"
-					class="avatar-img" />
-			</div>
 
-			<!-- ? Presentation -->
-			<article id="presentation">
-				<h3 class="presentation-title">Présentation</h3>
-				<p class="presentation-text">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-					assumenda expedita dolorum facilis quisquam doloribus quo quae
-					corrupti culpa! Possimus omnis suscipit optio ut aperiam in molestiae
-					iure accusantium earum!
-				</p>
-				<div class="cli-bar"></div>
-			</article>
+			<!-- * Presentation -->
 
-			<!-- ? Skils -->
-			<article id="skills">
-				<h3 class="skills-title">Skills</h3>
-				<div class="skills-list">
-					<p>HTML 5 .......</p>
-					<p>CSS 3 ........</p>
-					<p>JS ...........</p>
-					<p>React ........</p>
-					<p>Figma ........</p>
-					<p>Etc ..........</p>
+			<section class="section-1">
+				<div class="avatar">
+					<img
+						src="./images/8bitpix.png"
+						alt="Avatar 8bit barbu"
+						class="avatar-img" />
 				</div>
-				<div class="cli-bar"></div>
-				<div class="vect1-img">
-					<img src="./images/background/Vector 1.png" alt="web" />
-				</div>
-			</article>
+
+				<article id="presentation">
+					<h3 class="presentation-title">Présentation</h3>
+					<p class="presentation-text">
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+						assumenda expedita dolorum facilis quisquam doloribus quo quae
+						corrupti culpa! Possimus omnis suscipit optio ut aperiam in
+						molestiae iure accusantium earum!
+					</p>
+					<div class="cli-bar"></div>
+				</article>
+			</section>
+
+			<!-- * Skils -->
+			<section class="section-2">
+				<article id="skills">
+					<h3 class="skills-title">Compétences</h3>
+					<div class="skills-list">
+						<p>HTML5 .......</p>
+						<p>CSS3 ........</p>
+						<p>JS ...........</p>
+						<p>React ........</p>
+						<p>Figma ........</p>
+					</div>
+					<div class="cli-bar"></div>
+				</article>
+			</section>
 			<div class="web-img"><img src="./images/web.png" alt="web" /></div>
 
-			<!-- ? Projets -->
-			<article id="projets">
-				<div class="vect2-img">
-					<img src="./images/background/Vector 2.png" alt="web" />
-				</div>
-				<h3 class="projets-title">Projets</h3>
-				<aside class="projet-center">
-					<!--! flip -->
-					<div class="flip-card flip-card-2">
-						<div class="flip-card-inner">
-							<div class="flip-card-front">
-								<p class="title-card">Image Projets</p>
-								<p>Hover Me</p>
-							</div>
-							<div class="flip-card-back">
-								<p class="title">A propos du projet</p>
-								<p>Leave Me</p>
-							</div>
-						</div>
-					</div>
-					<div class="flip-card flip-card-2">
-						<div class="flip-card-inner">
-							<div class="flip-card-front">
-								<p class="title-card">Image Projets</p>
-								<p>Hover Me</p>
-							</div>
-							<div class="flip-card-back">
-								<p class="title">A propos du projet</p>
-								<p>Leave Me</p>
-							</div>
-						</div>
-					</div>
-					<!--! fin flip -->
-				</aside>
+			<!-- * Projets -->
 
-				<!-- heart -->
-				<div class="heart">
-					<div class="heart-img">
-						<img src="./images/heart-vide.png" alt="Pixel-heart" />
-						<img src="./images/heart-vide.png" alt="Pixel-heart" />
-						<img src="./images/heart-vide.png" alt="Pixel-heart" />
-						<img src="./images/heart-vide.png" alt="Pixel-heart" />
-						<img src="./images/heart-vide.png" alt="Pixel-heart" />
-					</div>
-				</div>
-			</article>
+			<section class="section-3">
+				<article id="projets">
+					<h3 class="projets-title">Projets</h3>
+					<aside class="projet-center">
+						<!-- flip -->
+						<div class="flip-card flip-card-2">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<p class="title-card">Image Projets</p>
+									<p>Hover Me</p>
+								</div>
+								<div class="flip-card-back">
+									<p class="title">A propos du projet</p>
+									<p>Leave Me</p>
+								</div>
+							</div>
+						</div>
+						<div class="flip-card flip-card-2">
+							<div class="flip-card-inner">
+								<div class="flip-card-front">
+									<p class="title-card">Image Projets</p>
+									<p>Hover Me</p>
+								</div>
+								<div class="flip-card-back">
+									<p class="title">A propos du projet</p>
+									<p>Leave Me</p>
+								</div>
+							</div>
+						</div>
+						<!-- fin flip -->
+					</aside>
+				</article>
+			</section>
 		</main>
-		<!-- ? fin Main Page -->
 
-		<!-- ? footer -->
+		<!-- * fin Main Page -->
+
+		<!-- * footer -->
+
 		<footer class="footer">
 			<div id="contact">
 				<h4>Contact me</h4>
 			</div>
-			<div class="social">
-				<div class="social-linkdin">
+			<div class="socials">
+				<div class="social social-linkdin">
 					<a href="https://www.linkedin.com/in/r%C3%A9my-bruno/">
 						<i class="fab fa-linkedin"></i>
 						<p>Linkdin/Rémy BRUNO</p>
 					</a>
 				</div>
-				<div class="social-github">
+				<div class="social social-github">
 					<a href="https://github.com/Remy-BRUNO">
 						<i class="fab fa-github-square"></i>
 						<p>Github/Rémy BRUNO</p>
 					</a>
 				</div>
-				<div class="social-mail">
-					<i class="fas fa-envelope"></i>
-					<p>bruno.remy.sebastien@gmail.com</p>
+				<div class="social social-mail">
+					<a href="mailto:bruno.remy.sebastien@gmail.com"
+						><i class="fas fa-envelope"></i>
+						<p>bruno.remy.sebastien@gmail.com</p></a
+					>
 				</div>
 			</div>
 		</footer>
