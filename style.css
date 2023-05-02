@@ -517,7 +517,6 @@ button span:not(hover) {
 	line-height: 1rem;
 	overflow: hidden;
 }
-
 .socials p,
 .socials i {
 	transition: var(--transition);
